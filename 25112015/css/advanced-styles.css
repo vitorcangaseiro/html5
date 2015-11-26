@@ -1,0 +1,41 @@
+body{
+	text-align: center;
+}
+
+section{
+	display: inline-block;
+	border: 1px solid black;
+	padding: 2%;
+	width: 30%;
+}
+
+#principal1{
+	display: block;
+	width: 500px;
+	margin: 50px auto;
+	padding: 15px;
+	text-align: center;
+	border: 1px solid black;
+	background: #DDDDDD;
+
+	border-radius: 25px;
+
+	box-shadow: black 3px 5px 10px;
+
+}
+
+#principal2{
+	text-align: center;
+	background: #DDDDDD;
+	border-radius: 40% / 25%;
+
+	box-shadow: rgba(80,80,80, 0.9) -3px -5px 10px inset;
+	text-shadow: rgba(90,90,90,0.9) -3px -5px 10px;
+}
+
+#principal3{
+	text-align: center;
+	background: #AAAAAA;
+
+	color: hsla(220, 75%, 90%, 0.7);
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fucking Form</title>
+	<meta name="viewport" content="width=device-width initial-scale=1.0 minimum-scale=1.0 maximum-scale=5.0" >
+
+	<link rel="stylesheet" type="text/css" href="css/formulario-validacion.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<ul class="nav nav-tabs">
+		  <li class="pull-left"><a href="#home">Home</a></li>
+		  <li role="presentation" class="pull-right dropdown">
+		    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+		      Usuario <span class="caret"></span>
+		    </a>
+		    <ul class="dropdown-menu">
+		      	<li><a href="#home">Home</a></li>
+		      	<li><a href="#home">Quit</a></li>
+		    </ul>
+		  </li>
+		  
+		</ul>
+		<h2 style="text-align:center">Formulario</h2>
+		<div class="row" style="margin-top: 2%;margin-bottom: 50px">
+			<div class="col-md-offset-4 col-md-4 col-xs-10 col-xs-offset-1">
+				<form name="formulario">
+					<fieldset class="row">
+						<legend>Datos de Conexión</legend>
+						<p>
+							<label>Usuario*</label><br>
+							<input type="text" required pattern="^[a-zA-Z].*" class="form-control " />
+						</p>
+						<p>
+							<label>Contrasinal*</label><br>
+							<input type="password" required pattern=".{8}" class="form-control" />
+						</p>
+					</fieldset>
+					<fieldset class="row">
+						<legend>Datos Personais</legend>
+						<p>
+							<label>Idade</label><br>
+							<input required type="number" min="0" max="110" class="form-control" />
+						</p>
+						<p>
+							<label>Data Nacemento*</label><br>
+							<input required type="date" class="form-control"/>
+						</p>
+						<p>
+							<label>Email*</label><br>
+							<input required type="email" class="form-control" />
+						</p>
+						<p>
+							<label>Sexo*</label><br>
+							<input required type="radio" name="sex" />Home<br>
+							<input required type="radio" name="sex" />Muller
+						</p>
+						<p>
+							<label>Teléf. Fixo</label><br>
+							<input type="text" type="tel" pattern="^[9|8]\d{8}$" class="form-control"/>
+						</p>
+						<p>
+							<label>Teléf. Móbil</label><br>
+							<input type="text" type="tel" pattern="^[7|6]\d{8}$" class="form-control"/>
+						</p>
+						<p>
+							<label>Comentarios</label><br>
+							<textarea rows="5" cols="100" class="form-control"></textarea>
+						</p>
+					</fieldset>
+
+					<div style="margin-top:10px;text-align:center">
+						<input class="btn btn-success" type="submit" value="Enviar" />
+						<input class="btn btn-danger" type="reset" value="Limpar" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>

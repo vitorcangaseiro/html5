@@ -1,0 +1,120 @@
+/*Selector Global. Boa práctica quitar todos marxes e paddings*/
+*{
+	margin: 0%;
+	padding: 0%;
+
+	box-sizing: border-box; /*Móbil*/
+
+	-moz-box-sizing: border-box; /*Mozilla*/
+	-webkit-box-sizing: border-box; /*Chrome*/
+	box-sizing: border-box; /* Opera*/
+}
+
+body{
+	background: GhostWhite;
+
+	/*dsitribución en caixas
+	body ocupa o 100% do dispositivo*/
+	display: inline-block;
+	width: 100%
+}
+
+header, nav, section, article, aside, footer{
+	border: 1px solid black;
+}
+
+header, nav, footer{
+	text-align: center;
+}
+
+header, nav{
+	width: 100%
+}
+
+section{
+	width:  40%;
+	float: left;
+}
+
+aside{
+	width: 20%;
+	float: right;
+}
+
+footer{
+	/* Así tamén funciona
+	float: left;
+	width: 100%;
+	*/
+	clear: both; /*Evita que o footer suba e descoloque a composición de caixas*/
+}
+
+
+
+section > article{
+	/*Hai 3 articulos dentro da sección */
+	width: 100%;
+	float: left;
+}
+
+article >table{
+	width:100%;
+}
+
+article > p, aside >ul > li{
+	border: 1px solid black !important;
+}
+
+section>h1:first-child, article>p:first-child{
+	text-align: center;
+	/*background-color: yellow;*/
+}
+
+
+
+.link-list > li{
+	display: block;
+}
+
+.center-align{
+	text-align: center;
+}
+
+.right-align{
+	text-align: right;
+}
+
+.left-align{
+	text-align: left;
+}
+
+a:link{
+	color: green;
+}
+
+a:visited{
+	color:red;
+}
+
+/*Apartir de 700px imos facer que a pantalla se pinte de outro xeito*/
+@media screen and (max-width: 700px){
+
+	section, aside{ /*Chegado a 700px mandamos o menú para debaixo dos artículos*/
+		width: 100%; 
+		float: left;
+	}
+	/*A partir de este tamaño os artículos van un baixo doutro*/
+	section > article{
+		width: 100%;
+	}
+
+	.link-list > li{
+		display: inline-block;
+	}
+
+	
+
+} 
+
+
+
